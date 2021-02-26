@@ -191,13 +191,12 @@ public final class Class<T> implements java.io.Serializable, GenericDeclaration,
      * 为了让JVM找到您的本机函数，必须以某种方式命名它们。例如，对于java.lang.Object.registerNatives，
      * 相应的C函数被命名为Java_java_lang_Object_registerNatives。通过使用registerNatives
      * （或更确切地说，是JNI函数RegisterNatives），您可以随心所欲地命名C函数。
-     */
+     * 
     private static native void registerNatives();
-
     static {
         registerNatives();
     }
-
+    
     /*
      * Private constructor. Only the Java Virtual Machine creates Class objects.
      * This constructor is not used and prevents the default constructor being
